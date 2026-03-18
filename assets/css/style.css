@@ -1,0 +1,61 @@
+/* Base and Custom Styles */
+
+/* Custom Scrollbar for a premium feel */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0f172a; 
+}
+
+::-webkit-scrollbar-thumb {
+  background: #334155; 
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #6366f1; 
+}
+
+/* Glassmorphism Navigation */
+.glass-nav {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+.dark .glass-nav {
+  background: rgba(11, 17, 32, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(30, 41, 59, 0.8);
+}
+
+/* Scroll Revel Animations */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger multiple reveals */
+.reveal:nth-child(2) { transition-delay: 100ms; }
+.reveal:nth-child(3) { transition-delay: 200ms; }
+.reveal:nth-child(4) { transition-delay: 300ms; }
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px; /* offset for fixed header */
+}
+
+/* Fix some icon positioning for aesthetic */
+.fa-check-circle {
+    line-height: normal;
+}
